@@ -33,7 +33,7 @@ unset($form['_token']);
           // それ以外はすべてのニュースを取得する
           $posts = Profile::all();
       }
-      return view('admin.Profile.index', ['posts' => $posts, 'cond_name' => $cond_name]);
+      return view('admin.profile.index', ['posts' => $posts, 'cond_name' => $cond_name]);
   }
   
     
