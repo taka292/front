@@ -25,10 +25,10 @@ unset($form['_token']);
     }
     public function index(Request $request)
   {
-      $cond_title = $request->cond_name;
-      if ($cond_title != '') {
+      $cond_name = $request->cond_name;
+      if ($cond_name != '') {
           // 検索されたら検索結果を取得する
-          $posts = Profile::where('name', $cond_title)->get();
+          $posts = Profile::where('name', $cond_name)->get();
       } else {
           // それ以外はすべてのニュースを取得する
           $posts = Profile::all();
